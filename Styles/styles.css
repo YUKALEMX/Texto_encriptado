@@ -2,55 +2,65 @@
 
 
 :root {
+    /* Alta de colores mas usados en los estilos*/
     --color-primaria: #F3F5FC;
     --color-secundaria: #0f0808;
     --color-terciaria: #0A3871;
     --color-cuarta: #D8DFE8;
+    --color-quinta: #ffffff;
 
     --fuente-krona: 'Krona One', sans-serif;
     --fuente-montserrat: 'Montserrat', sans-serif;
 }
-* {
+* { /* Margenes de inicio para el espacio de trabajo*/
     padding: 10;
     margin:10;
 }
-body{
+body{/* disenio del body*/
     box-sizing: border-box;
     background-color: var(--color-primaria);
     color: var(--color-secundaria);
 }
+footer{/*estilo footer*/
+    color:var(--color-terciaria);
+    background-color: var(--color-cuarta);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
 
-
-.presentacion {
-    margin: 10% 15%;
+.presentacion {/* disenio del main*/
+    margin: 0% 10%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 100px;
     
 }
 
-.presentacion__instruccion{
+.presentacion__instruccion{/* disenio de la seccion del texto de entrada y botones principales*/
     width: 800px;
     display: flex;
     flex-direction: column;
     gap: 500px;
 }
-.presentacion__resultado{
+.presentacion__resultado{/*disenio de la seccion del cuatro de resultado y boton copiar*/
     width: 800px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     padding-top: 2rem;
 }
 
 
-.presentacion__botones{
+.presentacion__botones{/*disenio del div de botones*/
     width: 615px;
     display: flex;
     flex-direction: row;
     gap: 40px;
 }
-.presentacion__boton1{
+.presentacion__boton1{/*disenio boton encriptar*/
     border: var(--color-terciaria) 1px solid;
     background-color: var(--color-terciaria);
     width: 280px;
@@ -63,7 +73,7 @@ body{
     color: var(--color-cuarta);
     font-family: 'Montserrat', sans-serif;
 }
-.presentacion__boton2{
+.presentacion__boton2{/*disenio boton desencriptar*/
     border: var(--color-terciaria) 1px solid;
     background-color: var(--color-cuarta);
     width: 280px;
@@ -78,7 +88,22 @@ body{
 
 }
 
-.instrucciones{
+.presentacion__boton3{/*disenio boton copiar*/
+    border: var(--color-terciaria) 1px solid;
+    background-color: var(--color-quinta);
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-terciaria);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.instrucciones{/*disenio de instrucciones y su imagen*/
     font-family: var(--fuente-krona);
     font-weight: 400;
     font-size: 0.7rem;
@@ -90,7 +115,7 @@ body{
     padding: 2% 1% 1% 2%;
     display: flex;
     width: 577px;
-    height: 48px;
+    height: 200px;
     background: inherit;
     background-color:transparent;
     border: 0;
@@ -98,6 +123,10 @@ body{
     text-decoration: none;
     font-size: 1.5em;
     background-position: center;
+    display: inline-block;
+    min-width: 100px;
+  padding-right: 5px;
+  resize: none;
     }
     .palabrac::placeholder {
         color:var(--color-terciaria);;
@@ -114,40 +143,94 @@ body{
     .palabrac:-moz-placeholder {
          color: var(--color-terciaria);;
        }
-    .palabrac:focus{
+    .palabrac:focus{/* Estilo input ingreso de texto a encriptar o desencriptar al escribir o pner el cursor*/
         border: 0;
         outline: none;
         color: var(--color-terciaria);
         text-decoration: none;
     }
 
-    .palabracd{
+    .palabracd{/*estilo div de respuesta y boton copiar inicial*/
         display: flex;
         width: 400px;
         height: 900px;
         border: 0;
         color: var(--color-secundaria);
-        text-decoration: none;
-        font-size: 1.5em;
-        text-align: center;
         border-radius: 25px;
-        background-color: #ffffff;
+        background-color: var(--color-quinta);
         background-image: url("../Imagen/Munieco.png");
         background-repeat: no-repeat;
         background-position: center;
         resize: none;
+        align-items: center;
+        justify-content: end;
+        vertical-align: middle;
+        flex-direction: column;
         }
 
-    .footer{
-        color:var(--color-primaria);
-        background-color: var(--color-terciaria);
-        padding: 24px;
-        text-align: center;
-        font-family: var(--fuente-krona);
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
-    @media (max-width: 1200px) {
+        .palabracdst2{/*estilo div de respuesta y boton copiar una vez mostrando respuesta*/
+            display: flex;
+            width: 400px;
+            height: 900px;
+            border: 0;
+            color: var(--color-secundaria);
+            border-radius: 25px;
+            background-color: var(--color-quinta);
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            resize: none;
+            align-items: center;
+            justify-content: start;
+            vertical-align: middle;
+            flex-direction: column;
+            gap: 110px;
+            }
+
+        .palabracd1{/*estilo mensaje inicial en negritas*/
+            width: 250px;
+            height: 60px;
+            display: flex;
+            background: inherit;
+            background-color:transparent;
+            border: 0;
+            resize: none;
+            background-image: none;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            }
+            .palabracd2{/*estilo segundo mensaje inicial*/
+                width: 355px;
+                height: 100px;
+                display: flex;
+                background: inherit;
+                background-color:transparent;
+                border: 0;
+                resize: none;
+                background-image: none;
+                text-align: center;
+                font-size: 1rem;
+                }
+
+.respuesta{/*formato cuadro de respuesta*/
+    padding: 2% 1% 1% 2%;
+    display: flex;
+    width: 350px;
+    height: 300px;
+    background: inherit;
+    background-color:transparent;
+    border: 0;
+    color: var(--color-terciaria);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: inline-block;
+    min-width: 100px;
+  padding-right: 5px;
+  resize: none;
+}
+
+    @media (max-width: 1200px) {/*cambio de estilo para formato tablet*/
 
         .header{
              padding: 10%;  
@@ -167,6 +250,7 @@ body{
             width: auto;
             justify-content: center;
             flex-direction: column;
+            gap: 200px;
         }
         .presentacion__resultado{
             width: auto;
@@ -177,23 +261,99 @@ body{
             justify-content: center;
    
         }
+        .presentacion__boton3{
+            border: var(--color-terciaria) 1px solid;
+            background-color: var(--color-quinta);
+            width: 550px;
+            text-align: center;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 21.5px 0;
+            text-decoration: none;
+            color: var(--color-terciaria);
+            font-family: 'Montserrat', sans-serif;
+        
+        }
         .palabracd{
             display: flex;
             width: 600px;
-            height: 250px;
+            height: 500px;
             border: 0;
             color: var(--color-secundaria);
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.5rem;
             border-radius: 25px;
-            background-color: #ffffff;
+            background-color: var(--color-quinta);
             background-image: none;
             background-repeat: no-repeat;
             resize: none;
+            align-items: center;
+            justify-content: start;
+            vertical-align: middle;
+            flex-direction: column;
             }
+            .palabracdst2{
+                display: flex;
+                width: 600px;
+                height: 500px;
+                border: 0;
+                color: var(--color-secundaria);
+                border-radius: 25px;
+                background-color: var(--color-quinta);
+                background-image: none;
+                background-repeat: no-repeat;
+                background-position: center;
+                resize: none;
+                align-items: center;
+                justify-content: start;
+                vertical-align: middle;
+                flex-direction: column;
+                gap: 1px;
+                }
+                .respuesta{
+                    padding: 2% 1% 1% 2%;
+                    display: flex;
+                    width: 550px;
+                    height: 300px;
+                    color: var(--color-terciaria);
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    background-position: center;
+                    display: inline-block;
+                    min-width: 100px;
+                  padding-right: 5px;
+                  resize: none;
+                }
+            
+            .palabracd1{
+                width: 250px;
+                height: 60px;
+                display: flex;
+                background: inherit;
+                background-color:transparent;
+                border: 0;
+                resize: none;
+                background-image: none;
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5rem;
+                }
+                .palabracd2{
+                    width: 500px;
+                    height: 100px;
+                    display: flex;
+                    background: inherit;
+                    background-color:transparent;
+                    border: 0;
+                    resize: none;
+                    background-image: none;
+                    text-align: center;
+                    font-size: 1rem;
+                    }
         
     }
-    @media (max-width: 800px) {
+    @media (max-width: 800px) {/*cambio de estilo para formato smartphone*/
         .header{
             padding: 10%;  
        }
@@ -209,7 +369,7 @@ body{
            width: auto;
            justify-content: center;
            flex-direction: column;
-           gap: 150px;
+           gap: 50px;
        }
        .presentacion__resultado{
            width: auto;
@@ -220,20 +380,70 @@ body{
            justify-content: center;
            flex-direction: column;
        }
+       .presentacion__boton3{
+        border: var(--color-terciaria) 1px solid;
+        background-color: var(--color-quinta);
+        width: 280px;
+        text-align: center;
+        border-radius: 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 21.5px 0;
+        text-decoration: none;
+        color: var(--color-terciaria);
+        font-family: 'Montserrat', sans-serif;
+    
+    }
        .palabracd{
         display: flex;
         width: 350px;
-        height: 200px;
+        height: 400px;
         border: 0;
         color: var(--color-secundaria);
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.2em;
         border-radius: 25px;
-        background-color: #ffffff;
+        background-color: var(--color-quinta);
         background-image: none;
         background-repeat: no-repeat;
+                    align-items: center;
+            justify-content: start;
+            vertical-align: middle;
+            flex-direction: column;
         resize: none;
         }
+        .palabracdst2{
+            display: flex;
+            width: 350px;
+            height: 500px;
+            border: 0;
+            color: var(--color-secundaria);
+            border-radius: 25px;
+            background-color: var(--color-quinta);
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            resize: none;
+            align-items: center;
+            justify-content: start;
+            vertical-align: middle;
+            flex-direction: column;
+            gap: 1px;
+            }
+            .respuesta{
+                padding: 2% 1% 1% 2%;
+                display: flex;
+                width: 300px;
+                height: 300px;
+                color: var(--color-terciaria);
+                text-decoration: none;
+                font-size: 1.5em;
+                background-position: center;
+                display: inline-block;
+                min-width: 100px;
+              padding-right: 5px;
+              resize: none;
+            }
         .presentacion__instruccion{
             width: 600px;
             display: flex;
@@ -245,12 +455,37 @@ body{
     padding: 2% 1% 1% 2%;
     display: flex;
     width: 277px;
-    height: 48px;
+    height: 200px;
     background: inherit;
     background-color:transparent;
     border: 0;
     color: var(--color-terciaria);
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     }
+    .palabracd1{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        background: inherit;
+        background-color:transparent;
+        border: 0;
+        resize: none;
+        background-image: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+        }
+        .palabracd2{
+            width: 500px;
+            height: 70px;
+            display: flex;
+            background: inherit;
+            background-color:transparent;
+            border: 0;
+            resize: none;
+            background-image: none;
+            text-align: center;
+            font-size: 0.5rem;
+            }
     }

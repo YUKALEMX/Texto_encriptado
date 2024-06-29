@@ -4,29 +4,50 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+            <!-- Titulo de la pagina-->
+    <title>Encriptador</title>
+            <!-- Carga de archivo estilos-->
     <link rel="stylesheet" href="./Styles/styles.css">
 
 </head>
 <body>
+            <!-- Imagen de logo Alura-->
     <header><img class="incono1" src="./Imagen/Logo.png" alt="alura Challenge ONE Front End - Encriptado de texto"></header>
+            <!-- contenedor primario-->
     <main class="presentacion">
-        <section class="presentacion__instruccion">     
-            <input type="text" class="palabrac" placeholder="Ingrese el texto aqui" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)" />
+                <!-- seleccion ingreso de texto, instrucciones y botones-->
+        <section class="presentacion__instruccion"> 
+                    <!-- ingreso de palabra a procesar con la regla de solo minusculas sin acentos--> 
+            <textarea name="palabrac1" id="palabrac1" class="palabrac" placeholder="Ingrese el texto aqui" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)" ></textarea>   
+                    <!-- div para agrupar instrucciones y botones -->          
             <div> 
                <p class="instrucciones"><img src="./Imagen/Group.png"> Solo letras minúsculas y sin acentos</p>
-                <div class="presentacion__botones">
-                    <a class="presentacion__boton1" href="https://instagram.com/">Encriptar</a>
-                    <a class="presentacion__boton2" href="https://github.com/">Desencriptar</a>
-                </div>
+                    <!-- agrupacion para los botones--> 
+            <div class="presentacion__botones">
+                        <!-- boton encriptar--> 
+                <button class="presentacion__boton1" onclick="encriptxt()">Encriptar</button>
+                        <!-- boton desencriptar-->
+                <button class="presentacion__boton2" onclick="desencriptxt()">Desencriptar</button>
+            </div>
             </div>       
         </section>
+                <!-- seleccion de apartado de respuesta-->
         <section class="presentacion__resultado">
-            <div class="palabracd"><p style="font-weight: bold;">Ningun mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p></div>
+                    <!-- agrupacion de textot iniciales, respuesta y botton copiar-->
+            <div class="palabracd" id="palabracd" name="palabracd">
+                        <!-- input de respuesta, oculto hasta que se realice click en botones encriptar o desencriptar-->
+                <textarea name="respuesta" id="respuesta" class="respuesta" disabled="disabled" style="visibility: hidden;" ></textarea>   
+                        <!-- Mensaje inicial en negritas, visible hasta que se realice click en botones encriptar o desencriptar-->
+                <textarea name="palabracd1" id="palabracd1" class="palabracd1"  disabled="disabled">Ningun mensaje fue encontrado</textarea>
+                        <!-- Mensaje inicial secundario , visible hasta que se realice click en botones encriptar o desencriptar-->
+                <textarea name="palabracd2" id="palabracd2" class="palabracd2"  disabled="disabled">Ingresa el texto que desees encriptar o desencriptar.</textarea>
+                        <!-- boton copiar oculto hasta que se realice click en botones encriptar o desencriptar-->
+                <button class="presentacion__boton3" id="copy" hidden="hidden" onclick="cptexto()">Copiar</button>
+            </div>
         </section>
     </main>
-    <footer></footer>
-
+<footer>Creado por Alejo Carrasco</footer>
+            <!-- Carga de archivo Javascript-->
+    <script src="./Javascript/encripdescrip.js"></script>
 </body>
 </html>
