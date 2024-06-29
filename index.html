@@ -11,21 +11,22 @@
 <body>
     <header><img class="incono1" src="./Imagen/Logo.png" alt="alura Challenge ONE Front End - Encriptado de texto"></header>
     <main class="presentacion">
-        <section class="presentacion__instruccion">
+        <section class="presentacion__instruccion">     
             <input type="text" class="palabrac" placeholder="Ingrese el texto aqui" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)" />
             <div> 
                <p class="instrucciones"><img src="./Imagen/Group.png"> Solo letras minúsculas y sin acentos</p>
-            
                 <div class="presentacion__botones">
                     <a class="presentacion__boton1" href="https://instagram.com/">Encriptar</a>
                     <a class="presentacion__boton2" href="https://github.com/">Desencriptar</a>
                 </div>
-            </div>
-               
+            </div>       
         </section>
-            <img src="Imagem.png" alt="Foto de Ana García desarrolando un proyecto">
+        <section class="presentacion__resultado">
+            <div class="palabracd"><p style="font-weight: bold;">Ningun mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p></div>
+        </section>
     </main>
     <footer></footer>
-    <script src="./Javascript/encripdescrip.js"></script>
+
 </body>
 </html>

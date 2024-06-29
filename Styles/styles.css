@@ -22,26 +22,27 @@ body{
 
 
 .presentacion {
-    margin: 10%;
+    margin: 10% 15%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 100px;
+    
 }
 
 .presentacion__instruccion{
-    width: 615px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     gap: 500px;
 }
-
-.instruccion{
-    width: 615px;
+.presentacion__resultado{
+    width: 800px;
     display: flex;
-    flex-direction: column;
-
-   
+    align-items: center;
+    padding-top: 2rem;
 }
+
 
 .presentacion__botones{
     width: 615px;
@@ -96,10 +97,6 @@ body{
     color: var(--color-terciaria);
     text-decoration: none;
     font-size: 1.5em;
-    /*
-    background-image: url("../Imagen/Logo.png");
-    background-repeat: no-repeat;
-    */
     background-position: center;
     }
     .palabrac::placeholder {
@@ -123,6 +120,33 @@ body{
         color: var(--color-terciaria);
         text-decoration: none;
     }
+
+    .palabracd{
+        display: flex;
+        width: 400px;
+        height: 900px;
+        border: 0;
+        color: var(--color-secundaria);
+        text-decoration: none;
+        font-size: 1.5em;
+        text-align: center;
+        border-radius: 25px;
+        background-color: #ffffff;
+        background-image: url("../Imagen/Munieco.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        resize: none;
+        }
+
+    .footer{
+        color:var(--color-primaria);
+        background-color: var(--color-terciaria);
+        padding: 24px;
+        text-align: center;
+        font-family: var(--fuente-krona);
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
     @media (max-width: 1200px) {
 
         .header{
@@ -132,13 +156,101 @@ body{
             justify-content: center;
         }
         .presentacion{
-            flex-direction: column-reverse;
-            padding: 5%;
+           
+            padding: 15%;
+            justify-content: flex-start;
+            flex-direction: column;
     
         }
     
         .presentacion__instruccion{
             width: auto;
+            justify-content: center;
+            flex-direction: column;
         }
+        .presentacion__resultado{
+            width: auto;
+            justify-content: center;
+        }
+        .presentacion__botones{
+            width: auto;
+            justify-content: center;
+   
+        }
+        .palabracd{
+            display: flex;
+            width: 600px;
+            height: 250px;
+            border: 0;
+            color: var(--color-secundaria);
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 25px;
+            background-color: #ffffff;
+            background-image: none;
+            background-repeat: no-repeat;
+            resize: none;
+            }
         
+    }
+    @media (max-width: 800px) {
+        .header{
+            padding: 10%;  
+       }
+       .presentacion{
+          
+           padding: 15%;
+           align-items: center;
+           flex-direction: column;
+   
+       }
+   
+       .presentacion__instruccion{
+           width: auto;
+           justify-content: center;
+           flex-direction: column;
+           gap: 150px;
+       }
+       .presentacion__resultado{
+           width: auto;
+           justify-content: center;
+       }
+       .presentacion__botones{
+           width: auto;
+           justify-content: center;
+           flex-direction: column;
+       }
+       .palabracd{
+        display: flex;
+        width: 350px;
+        height: 200px;
+        border: 0;
+        color: var(--color-secundaria);
+        text-decoration: none;
+        font-size: 1.5em;
+        border-radius: 25px;
+        background-color: #ffffff;
+        background-image: none;
+        background-repeat: no-repeat;
+        resize: none;
+        }
+        .presentacion__instruccion{
+            width: 600px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+ 
+        }
+        .palabrac{
+    padding: 2% 1% 1% 2%;
+    display: flex;
+    width: 277px;
+    height: 48px;
+    background: inherit;
+    background-color:transparent;
+    border: 0;
+    color: var(--color-terciaria);
+    text-decoration: none;
+    font-size: 1.5em;
+    }
     }
